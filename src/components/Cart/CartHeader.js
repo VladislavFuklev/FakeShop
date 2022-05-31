@@ -3,8 +3,9 @@ import './CartHeader.scss';
 
 
 export const CartHeader = () => {
+    const a = false;
     return (
-        <div className='cartHeader'>
+        <div className={a ? 'white' : 'red'}>
             <div>0</div>
             <div>0$</div>
         </div>
