@@ -1,4 +1,4 @@
-import { Card, Typography } from '@mui/material'
+import { Card, Grid, Typography } from '@mui/material'
 import React from 'react'
 import { ProductsListItem } from './ProductsListItem'
 
@@ -9,15 +9,29 @@ export const ProductsList = () => {
                 variant="h4"
                 align="center"
                 style={{
-                    marginTop: 30,
+                    margin: '30 0',
                     textTransform: 'uppercase',
                 }}
             >
                 Products List
             </Typography>
-            <ProductsListItem/>
-            <ProductsListItem/>
-            <ProductsListItem/>
+            <Grid
+                container
+                spacing={3}
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+            >
+                <Grid item xs={12} sm={6} md={4}>
+                    <ProductsListItem />
+                </Grid>
+                <Grid item xs={12} sm={6} md={4}>
+                    <ProductsListItem />
+                </Grid>
+                <Grid item xs={12} sm={6} md={4}>
+                    <ProductsListItem />
+                </Grid>
+            </Grid>
         </>
     )
 }
