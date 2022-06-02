@@ -13,11 +13,13 @@ export const ProductsListItem = ({
         <>
             <Card>
                 <CardContent>
-                    <h4>{name}</h4>
-                    <p>{description}</p>
-                    <div>Type: {type}</div>
-                    <div>Capacity: {capacity}GB</div>
-                    <div>{price}$</div>
+                    <h2>{name}</h2>
+                    <p className='product-descr'>{description}</p>
+                    <div className="product-feautures"><span>Type:</span> {type}</div>
+                    <div className="product-feautures">
+                        <span>Capacity:</span> {capacity}GB
+                    </div>
+                    <div className="product-price">{price}$</div>
                 </CardContent>
                 <CardActions className="add-to-cart-block">
                     <Button variant="contained">Add to cart</Button>

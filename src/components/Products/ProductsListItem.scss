@@ -2,3 +2,20 @@
     justify-content: center;
     margin-bottom: 20px;
 }
+
+.product-price{
+    text-align: center;
+    font-size: 25px;
+}
+
+.product-feautures{
+    margin-bottom: 10px;
+    font-size: 19px;
+    span {
+        font-weight: bold;
+    }
+}
+
+.product-descr{
+    font-size: 19px;
+}
