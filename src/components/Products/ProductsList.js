@@ -23,17 +23,19 @@ export const ProductsList = () => {
                 justifyContent="center"
                 alignItems="center"
             >
-                {productsArray.map((product) => (
-                    <Grid item xs={12} sm={6} md={4} key={product.id}>
-                        <ProductsListItem
-                            name={product.name}
-                            description={product.description}
-                            type={product.type}
-                            capacity={product.capacity}
-                            price={product.price}
-                        />
-                    </Grid>
-                ))}
+                {productsArray.map(
+                    ({ id, name, description, type, capacity, price }) => (
+                        <Grid item xs={12} sm={6} md={4} key={id}>
+                            <ProductsListItem
+                                name={name}
+                                description={description}
+                                type={type}
+                                capacity={capacity}
+                                price={price}
+                            />
+                        </Grid>
+                    )
+                )}
             </Grid>
         </>
     )
