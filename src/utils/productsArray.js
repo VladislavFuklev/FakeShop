@@ -1,5 +1,6 @@
 const products = [
     {
+        name: 'iPhone XS',
         pricename: 'iPhone XS',
         description: 'This is iPhone XS',
         type: 'phone',
