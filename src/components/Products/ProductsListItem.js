@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 
 export const ProductsListItem = ({
     name,
-    description,
+    description = "No desc",
     type,
     capacity,
     price,
-    image,
+    image = "images/123.png"
 }) => {
     return (
         <>
@@ -47,5 +47,5 @@ ProductsListItem.propTypes = {
 
 ProductsListItem.defaultProps = {
     description: 'No desc...' ,
-    image:'images/123.png'
+    // image:'images/123.png'
 }
