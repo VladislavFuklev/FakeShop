@@ -37,10 +37,14 @@ export const ProductsListItem = ({
 }
 
 ProductsListItem.propTypes = {
-    name: PropTypes.string,
+    name: PropTypes.string.isRequired,
     description: PropTypes.string,
-    type: PropTypes.string,
-    capacity: PropTypes.number,
-    price: PropTypes.number,
+    type: PropTypes.string.isRequired,
+    capacity: PropTypes.number.isRequired,
+    price: PropTypes.number.isRequired,
     image: PropTypes.string,
+}
+
+ProductsListItem.defoultProps = {
+    description: 'No desc...'
 }
