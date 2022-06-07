@@ -45,6 +45,7 @@ ProductsListItem.propTypes = {
     image: PropTypes.string,
 }
 
-ProductsListItem.defoultProps = {
-    description: 'No desc...'
+ProductsListItem.defaultProps = {
+    description: 'No desc...' ,
+    image:'images/123.png'
 }
