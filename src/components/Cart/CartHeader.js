@@ -1,11 +1,13 @@
 import React from 'react'
 import './CartHeader.scss'
+import { App } from 'container/App/App'
 
-export const CartHeader = () => {
+export const CartHeader = ({cartDate}) => {
+    
     return (
         <div className="cartHeader">
-            <div>0</div>
-            <div>0$</div>
+            <div>{cartDate.count}$</div>
+            <div>{cartDate.price}$</div>
         </div>
     )
 }

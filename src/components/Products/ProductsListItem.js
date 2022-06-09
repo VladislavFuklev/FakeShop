@@ -21,6 +21,7 @@ export const ProductsListItem = ({
     const [count, setCount] = useState(1)
     const onIncrementClick = () => setCount(count + 1)
     const onDecrementClick = () => setCount(count - 1)
+
     return (
         <>
             <Card>
@@ -30,6 +31,7 @@ export const ProductsListItem = ({
                     </div>
                     <h2>{name}</h2>
                     <p className="product-descr">{description}</p>
+
                     <div className="product-feautures">
                         <span>Type:</span> {type}
                     </div>
@@ -39,16 +41,19 @@ export const ProductsListItem = ({
                     </div>
                     <div className="product-price">{price}$</div>
                     <div className="product-quantity">
-                        <Button 
-                        variant="contained" 
-                        onClick={onDecrementClick}
-                        disabled={count === 1}>
+                        <Button
+                            variant="contained"
+                            onClick={onDecrementClick}
+                            disabled={count === 1}
+                        >
                             -
                         </Button>
                         <TextField size="small" value={count} />
-                        <Button variant="contained"
-                         onClick={onIncrementClick}
-                         disabled={count === 10}>
+                        <Button
+                            variant="contained"
+                            onClick={onIncrementClick}
+                            disabled={count === 10}
+                        >
                             +
                         </Button>
                     </div>
