@@ -17,11 +17,12 @@ export const ProductsListItem = ({
     capacity,
     price,
     image,
+    cartDate,
+    click,
 }) => {
     const [count, setCount] = useState(1)
     const onIncrementClick = () => setCount(count + 1)
     const onDecrementClick = () => setCount(count - 1)
-
     return (
         <>
             <Card>
@@ -59,7 +60,12 @@ export const ProductsListItem = ({
                     </div>
                 </CardContent>
                 <CardActions className="add-to-cart-block">
-                    <Button variant="outlined">Add to cart</Button>
+                    <Button
+                        variant="outlined"
+                        onClick={click}
+                    >
+                        Add to cart
+                    </Button>
                 </CardActions>
             </Card>
         </>

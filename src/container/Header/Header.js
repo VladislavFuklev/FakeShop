@@ -9,7 +9,7 @@ import { Container } from '@mui/material'
 import { Menu } from 'components/Menu/Menu'
 import { CartHeader } from 'components/Cart/CartHeader'
 
-export const Header = ({cartDate}) => {
+export const Header = ({ cartDate }) => {
     return (
         <>
             <AppBar position="static">
