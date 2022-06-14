@@ -62,7 +62,7 @@ export const ProductsListItem = ({
                 <CardActions className="add-to-cart-block">
                     <Button
                         variant="outlined"
-                        onClick={click}
+                        onClick={() => click(count, price)}
                     >
                         Add to cart
                     </Button>

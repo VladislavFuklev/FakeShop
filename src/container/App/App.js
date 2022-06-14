@@ -9,10 +9,10 @@ export const App = () => {
         count: 0,
         price: 0,
     })
-    const click = () =>
+    const click = (count, price) =>
         setCartDate((prevState) => ({
-            count: prevState.count + 1,
-            price: prevState.price + 1,
+            count: prevState.count + count,
+            price: prevState.price + price
         }))
 
     return (
