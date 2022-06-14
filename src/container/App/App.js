@@ -12,7 +12,7 @@ export const App = () => {
     const click = (count, price) =>
         setCartDate((prevState) => ({
             count: prevState.count + count,
-            price: prevState.price + price
+            price: prevState.price + price*count
         }))
 
     return (
