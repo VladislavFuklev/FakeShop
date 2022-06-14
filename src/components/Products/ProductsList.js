@@ -2,9 +2,8 @@ import { Grid, Typography } from '@mui/material'
 import React from 'react'
 import { ProductsListItem } from './ProductsListItem'
 import productsArray from 'utils/productsArray'
-import PropTypes from 'prop-types'
 
-export const ProductsList = ({ cartDate, click }) => {
+export const ProductsList = ({ click }) => {
     return (
         <>
             <Typography
@@ -42,7 +41,6 @@ export const ProductsList = ({ cartDate, click }) => {
                                 capacity={capacity}
                                 price={price}
                                 image={image}
-                                cartDate={cartDate}
                                 click={click}
                             />
                         </Grid>
