@@ -1,6 +1,9 @@
 import React from 'react'
 import { keys } from 'lodash'
 import products , {getProductsObject} from 'utils/productsArray'
+import { CartTotal } from 'components/Cart/CartTotal'
+import { CartName } from 'components/Cart/CartName'
+
 
 
 
@@ -8,7 +11,7 @@ export const CartPage = ({ productsInCart , productsObject = getProductsObject(p
     return (
         <div className="cartHeader">
             <h1>Cart page</h1>
-            <div>
+            {/* <div>
                 {keys(productsInCart).map((productId) => (
                     <div key={productId}>
                         {productsObject[productId].name}:
@@ -16,18 +19,10 @@ export const CartPage = ({ productsInCart , productsObject = getProductsObject(p
                         {productsObject[productId].price}
                     </div>
                 ))}
-            </div>
-            <div>
-                total:
-                {keys(productsInCart).reduce(
-                    (previousValue, currentItem) =>
-                        previousValue +
-                        productsInCart[currentItem] *
-                            productsObject[currentItem].price,
-                    0
-                )}
-            </div>
-            <div></div>
+            </div> */}
+            <CartName productsInCart={productsInCart} />
+            <CartTotal productsInCart={productsInCart}/>
+
         </div>
     )
 }
