@@ -3,7 +3,6 @@ import { Header } from 'container/Header/Header'
 import { Main } from 'container/Main/Main'
 import { Footer } from 'container/Footer/Footer'
 import { CssBaseline } from '@mui/material'
-import {keys} from 'lodash'
 
 
 export const App = () => {
@@ -25,7 +24,7 @@ export const App = () => {
         <>
             <CssBaseline />
             <Header productsInCart={productsInCart} />
-            <Main click={click} />
+            <Main productsInCart={productsInCart} click={click} />
             <Footer />
         </>
     )

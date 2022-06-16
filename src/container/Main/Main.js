@@ -7,16 +7,16 @@ import { ShippingPage } from 'pages/Shipping/ShippingPage'
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-export const Main = ({ click }) => {
+export const Main = ({ click , productsInCart}) => {
     return (
         <>
             <Container>
                 <Routes>
                     <Route path="/" element={<ProductsList click={click} />} />
-                    <Route path="/cart" element ={<CartPage/>}/>
-                    <Route path="/payment" element ={<Payment/>}/>
-                    <Route path="/products" element ={<ProductPage/>}/>
-                    <Route path="/shipping" element ={<ShippingPage/>}/>
+                    <Route path="/cart" element={<CartPage productsInCart={productsInCart}/>} />
+                    <Route path="/payment" element={<Payment />} />
+                    <Route path="/products" element={<ProductPage />} />
+                    <Route path="/shipping" element={<ShippingPage />} />
                 </Routes>
             </Container>
         </>

@@ -11,7 +11,6 @@ const productsObject = products.reduce(
     {}
 )
 
-console.log(productsObject)
 export const CartHeader = ({ productsInCart }) => {
     return (
         <div className="cartHeader">
@@ -29,7 +28,7 @@ export const CartHeader = ({ productsInCart }) => {
                     (previousValue, currentItem) =>
                         previousValue +
                         productsInCart[currentItem] *
-                        productsObject[currentItem].price,
+                            productsObject[currentItem].price,
                     0
                 )}
             </div>

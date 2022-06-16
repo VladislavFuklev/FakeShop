@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '@mui/material/Button'
-import { Link, NavLink } from 'react-router-dom'
+import {NavLink } from 'react-router-dom'
 import './menu.scss'
 
 export const Menu = () => {
