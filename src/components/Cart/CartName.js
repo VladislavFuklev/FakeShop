@@ -7,6 +7,7 @@ export const CartName = ({
     productsInCart,
     productsObject = getProductsObject(products),
     CartItem = CartProductListItem,
+    removeProductFromCart
 }) => {
     return (
         <>
@@ -15,6 +16,7 @@ export const CartName = ({
                     key={productId}
                     product={productsObject[productId]}
                     productCount={productsInCart[productId]}
+                    removeProductFromCart={removeProductFromCart}
                 />
             ))}
         </>
