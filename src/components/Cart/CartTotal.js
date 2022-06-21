@@ -1,9 +1,11 @@
 import React from 'react'
 import { keys } from 'lodash'
-import products , {getProductsObject} from 'utils/productsArray'
+import products, { getProductsObject } from 'utils/productsArray'
 
-
-export const CartTotal = ({productsInCart, productsObject = getProductsObject(products)}) => {
+export const CartTotal = ({
+    productsInCart,
+    productsObject = getProductsObject(products),
+}) => {
     return (
         <div>
             total:

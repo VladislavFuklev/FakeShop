@@ -1,28 +1,20 @@
 import React from 'react'
-import { keys } from 'lodash'
-import products , {getProductsObject} from 'utils/productsArray'
 import { CartTotal } from 'components/Cart/CartTotal'
 import { CartName } from 'components/Cart/CartName'
+import { Grid } from '@mui/material'
+import { CartProductListItemExtended } from 'components/Cart/CartProductListItemExtended'
 
-
-
-
-export const CartPage = ({ productsInCart , productsObject = getProductsObject(products)}) => {
+export const CartPage = ({ productsInCart }) => {
     return (
-        <div className="cartHeader">
+        <>
             <h1>Cart page</h1>
-            {/* <div>
-                {keys(productsInCart).map((productId) => (
-                    <div key={productId}>
-                        {productsObject[productId].name}:
-                        {productsInCart[productId]} :
-                        {productsObject[productId].price}
-                    </div>
-                ))}
-            </div> */}
-            <CartName productsInCart={productsInCart} />
-            <CartTotal productsInCart={productsInCart}/>
-
-        </div>
+            <Grid container spacing={4}>
+                <CartName
+                    productsInCart={productsInCart}
+                    CartItem={CartProductListItemExtended}
+                />
+            </Grid>
+            <CartTotal productsInCart={productsInCart} />
+        </>
     )
 }
