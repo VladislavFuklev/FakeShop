@@ -9,6 +9,7 @@ import {
 } from '@mui/material'
 import './ProductsListItem.scss'
 import PropTypes from 'prop-types'
+import { Quantity } from 'components/Quantity/Quantity'
 
 export const ProductsListItem = ({
     id,
@@ -41,29 +42,14 @@ export const ProductsListItem = ({
                         <span>Capacity:</span> {capacity}GB
                     </div>
                     <div className="product-price">{price}$</div>
-                    <div className="product-quantity">
-                        <Button
-                            variant="contained"
-                            onClick={onDecrementClick}
-                            disabled={count === 1}
-                        >
-                            -
-                        </Button>
-                        <TextField size="small" value={count} />
-                        <Button
-                            variant="contained"
-                            onClick={onIncrementClick}
-                            disabled={count === 10}
-                        >
-                            +
-                        </Button>
-                    </div>
+                    <Quantity
+                        count={count}
+                        onDecrementClick={onDecrementClick}
+                        onIncrementClick={onIncrementClick}
+                    />
                 </CardContent>
                 <CardActions className="add-to-cart-block">
-                    <Button
-                        variant="outlined"
-                        onClick={() => click(id, count)}
-                    >
+                    <Button variant="outlined" onClick={() => click(id, count)}>
                         Add to cart
                     </Button>
                 </CardActions>
