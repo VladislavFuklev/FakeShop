@@ -7,7 +7,7 @@ import { ShippingPage } from 'pages/Shipping/ShippingPage'
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-export const Main = ({ click, productsInCart, removeProductFromCart }) => {
+export const Main = ({ click, productsInCart, removeProductFromCart, changeProductQuantity }) => {
     return (
         <>
             <Container>
@@ -19,6 +19,7 @@ export const Main = ({ click, productsInCart, removeProductFromCart }) => {
                             <CartPage
                                 productsInCart={productsInCart}
                                 removeProductFromCart={removeProductFromCart}
+                                changeProductQuantity={changeProductQuantity}
                             />
                         }
                     />

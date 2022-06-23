@@ -46,6 +46,7 @@ export const ProductsListItem = ({
                         count={count}
                         onDecrementClick={onDecrementClick}
                         onIncrementClick={onIncrementClick}
+                        minCount={1}
                     />
                 </CardContent>
                 <CardActions className="add-to-cart-block">

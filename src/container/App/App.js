@@ -21,11 +21,23 @@ export const App = () => {
         setProductsInCart((prevState) => omit(prevState, productId))
     }
 
+    const changeProductQuantity = (productId, quantity) => {
+        setProductsInCart((prevState) => ({
+            ...prevState,
+            [productId]: quantity,
+        }))
+    }
+
     return (
         <>
             <CssBaseline />
             <Header productsInCart={productsInCart} />
-            <Main productsInCart={productsInCart} click={click} removeProductFromCart={removeProductFromCart}/>
+            <Main
+                productsInCart={productsInCart}
+                click={click}
+                removeProductFromCart={removeProductFromCart}
+                changeProductQuantity={changeProductQuantity}
+            />
             <Footer />
         </>
     )
