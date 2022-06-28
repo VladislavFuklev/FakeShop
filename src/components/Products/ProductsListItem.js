@@ -10,6 +10,8 @@ import {
 import './ProductsListItem.scss'
 import PropTypes from 'prop-types'
 import { Quantity } from 'components/Quantity/Quantity'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
+import FavoriteIcon from '@mui/icons-material/Favorite'
 
 export const ProductsListItem = ({
     id,
@@ -31,6 +33,9 @@ export const ProductsListItem = ({
                     <div className="product-img">
                         <img src={image} alt="" />
                     </div>
+                    <Button variant="outlined">
+                        <FavoriteBorderIcon />
+                    </Button>
                     <h2>{name}</h2>
                     <p className="product-descr">{description}</p>
 
