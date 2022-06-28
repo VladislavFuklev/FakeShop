@@ -1,17 +1,12 @@
 import React from 'react'
 import { useState } from 'react'
-import {
-    Button,
-    Card,
-    CardActions,
-    CardContent,
-    TextField,
-} from '@mui/material'
+import { Button, Card, CardActions, CardContent } from '@mui/material'
 import './ProductsListItem.scss'
 import PropTypes from 'prop-types'
 import { Quantity } from 'components/Quantity/Quantity'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import FavoriteIcon from '@mui/icons-material/Favorite'
+import { useDispatch, useSelector } from 'react-redux'
 
 export const ProductsListItem = ({
     id,
@@ -26,6 +21,11 @@ export const ProductsListItem = ({
     const [count, setCount] = useState(1)
     const onIncrementClick = () => setCount(count + 1)
     const onDecrementClick = () => setCount(count - 1)
+
+    const isLiked = useSelector((state) => state[id])
+
+    const dispatch = useDispatch()
+
     return (
         <>
             <Card>
@@ -33,8 +33,21 @@ export const ProductsListItem = ({
                     <div className="product-img">
                         <img src={image} alt="" />
                     </div>
-                    <Button variant="outlined">
-                        <FavoriteBorderIcon />
+                    <Button
+                        variant="outlined"
+                        onClick={() => {
+                            isLiked
+                                ? dispatch({
+                                      type: 'DISLIKE',
+                                      id,
+                                  })
+                                : dispatch({
+                                      type: 'LIKE',
+                                      id,
+                                  })
+                        }}
+                    >
+                        {isLiked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                     </Button>
                     <h2>{name}</h2>
                     <p className="product-descr">{description}</p>
