@@ -16,13 +16,13 @@ export const ProductsListItem = ({
     capacity,
     price,
     image,
-    click,
 }) => {
     const [count, setCount] = useState(1)
     const onIncrementClick = () => setCount(count + 1)
     const onDecrementClick = () => setCount(count - 1)
 
-    const isLiked = useSelector((state) => state[id])
+
+    const isLiked = useSelector((state) => state.productsLikeState[id])
     const dispatch = useDispatch()
 
     return (
@@ -67,7 +67,11 @@ export const ProductsListItem = ({
                     />
                 </CardContent>
                 <CardActions className="add-to-cart-block">
-                    <Button variant="outlined" onClick={() => click(id, count)}>
+                    <Button variant="outlined" onClick={() => dispatch({
+                        type:'ADD-PRODUCT_TO_CART',
+                        id,
+                        count
+                    })}>
                         Add to cart
                     </Button>
                 </CardActions>

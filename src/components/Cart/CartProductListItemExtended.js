@@ -10,10 +10,8 @@ import FavoriteIcon from '@mui/icons-material/Favorite'
 export const CartProductListItemExtended = ({
     product,
     productCount,
-    removeProductFromCart,
-    changeProductQuantity,
 }) => {
-    const isLiked = useSelector((state) => state[product.id])
+    const isLiked = useSelector((state) => state.productsLikeState[product.id])
     const dispatch = useDispatch()
     return (
         <Grid item xs={12} sm={6}>
@@ -33,21 +31,29 @@ export const CartProductListItemExtended = ({
                     <Quantity
                         onDecrementClick={() =>
                             productCount === 1
-                                ? removeProductFromCart(product.id)
-                                : changeProductQuantity(
-                                      product.id,
-                                      productCount - 1
-                                  )
+                                ?   dispatch({
+                                    type: 'REMOVE_PRODUCT_FROM_CART',
+                                    id: product.id,
+                                })
+                                :   dispatch({
+                                    type: 'CHANGE_PRODUCT_QUANTITY',
+                                    id: product.id,
+                                    quantity:productCount - 1
+                                })
                         }
                         onIncrementClick={() =>
-                            changeProductQuantity(product.id, productCount + 1)
+                            dispatch({
+                                type: 'CHANGE_PRODUCT_QUANTITY',
+                                id: product.id,
+                                quantity:productCount + 1
+                            })
                         }
                         count={productCount}
                         minCount={0}
                     />
                     <Button
                         variant="outlined"
-                        style={{ marginTop: '20px', marginRight:'10px' }}
+                        style={{ marginTop: '20px', marginRight: '10px' }}
                         onClick={() => {
                             isLiked
                                 ? dispatch({
@@ -64,7 +70,12 @@ export const CartProductListItemExtended = ({
                     </Button>
                     <Button
                         style={{ marginTop: '20px' }}
-                        onClick={() => removeProductFromCart(product.id)}
+                        onClick={() =>
+                            dispatch({
+                                type: 'REMOVE_PRODUCT_FROM_CART',
+                                id: product.id,
+                            })
+                        }
                         variant="outlined"
                     >
                         <DeleteIcon />
