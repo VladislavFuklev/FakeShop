@@ -18,8 +18,6 @@ export const productsLikeReducer = (
                 [action.id]: false,
             }
 
-            break
-
         default:
             return state
     }

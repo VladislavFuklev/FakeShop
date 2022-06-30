@@ -23,7 +23,6 @@ export const ProductsListItem = ({
     const onDecrementClick = () => setCount(count - 1)
 
     const isLiked = useSelector((state) => state[id])
-
     const dispatch = useDispatch()
 
     return (
