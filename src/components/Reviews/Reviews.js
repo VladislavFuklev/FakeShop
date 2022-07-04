@@ -10,7 +10,6 @@ export const Reviews = () => {
         name: '',
         text: '',
     })
-
     const handleName = (e) =>
         SetNewReviews((prevState) => ({
             ...prevState,
