@@ -1,6 +1,5 @@
 import { Container } from '@mui/material'
 import { ProductsList } from 'components/Products/ProductsList'
-import { Reviews } from 'components/Reviews/Reviews'
 import { CartPage } from 'pages/Cart/CartPage'
 import { Payment } from 'pages/Payment/PaymentPage'
 import { ProductPage } from 'pages/Products/ProductsPage'
@@ -25,7 +24,6 @@ export const Main = ({
                                 <ProductsList
                                     addProductToCart={addProductToCart}
                                 />
-                                {/* <Reviews /> */}
                             </>
                         }
                     />
