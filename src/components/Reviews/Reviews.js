@@ -20,7 +20,7 @@ export const Reviews = () => {
         SetNewReviews((prevState) => ({
             ...prevState,
             text: e.target.value,
-        }))
+        }))  
 
     const reviewsSend = (e) => {
         e.preventDefault()
