@@ -7,6 +7,8 @@ import { ShippingPage } from 'pages/Shipping/ShippingPage'
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
+
+
 export const Main = ({
     addProductToCart,
     productsInCart,
