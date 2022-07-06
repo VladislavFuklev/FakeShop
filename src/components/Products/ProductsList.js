@@ -1,11 +1,9 @@
 import { Grid, Typography } from '@mui/material'
 import React from 'react'
 import { ProductsListItem } from './ProductsListItem'
-// import productsArray from 'utils/productsArray'
-import { useSelector } from 'react-redux'
+import productsArray from 'utils/productsArray'
 
 export const ProductsList = ({ click }) => {
-    const productsArray = useSelector((state) => state.products)
     return (
         <>
             <Typography
