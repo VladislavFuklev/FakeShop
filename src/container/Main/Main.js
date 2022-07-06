@@ -1,6 +1,7 @@
 import { Container } from '@mui/material'
 import { ProductsList } from 'components/Products/ProductsList'
 import { CartPage } from 'pages/Cart/CartPage'
+import { Checkout } from 'pages/Checkout/Checkout'
 import { Payment } from 'pages/Payment/PaymentPage'
 import { ProductPage } from 'pages/Products/ProductsPage'
 import { ShippingPage } from 'pages/Shipping/ShippingPage'
@@ -42,6 +43,7 @@ export const Main = ({
                     <Route path="/payment" element={<Payment />} />
                     <Route path="/products" element={<ProductPage />} />
                     <Route path="/shipping" element={<ShippingPage />} />
+                    <Route path="/checkout" element={<Checkout/>} />
                 </Routes>
             </Container>
         </>

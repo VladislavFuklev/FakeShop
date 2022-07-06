@@ -7,7 +7,9 @@ export const CartTotal = ({
     productsObject = getProductsObject(products),
 }) => {
     return (
-        <div>
+        <div style={{
+            textAlign:'center', fontWeight:'bold'
+        }}>
             total:
             {keys(productsInCart).reduce(
                 (previousValue, currentItem) =>

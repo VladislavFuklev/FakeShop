@@ -1,0 +1,14 @@
+.procced {
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    &:hover {
+        color: red;
+    }
+}
+
+.cart-procced {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
