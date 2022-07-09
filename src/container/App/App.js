@@ -7,10 +7,9 @@ import { useDispatch } from 'react-redux'
 import { fetchProducts } from 'redux/products.action'
 
 export const App = () => {
-
     const dispatch = useDispatch()
 
-    useEffect(()=> {
+    useEffect(() => {
         dispatch(fetchProducts())
     })
 

@@ -29,8 +29,7 @@ export const Checkout = () => {
     const renderMessage = () => {
         return (
             <div>
-                Dear {state.name}, thanks for you orderAddress
-                <p>Delivery address: {state.address}</p>
+               <h1>Вы успешно зарегистрировались!</h1>
             </div>
         )
     }

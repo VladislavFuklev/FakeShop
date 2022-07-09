@@ -1,9 +1,10 @@
 import React from "react";
+import './footer.scss'
 
 export const Footer = () => {
     return (
         <>
-            <h1>Footer.js</h1>
+            <div className="footer">Footer.js</div>
         </>
     )
 }
